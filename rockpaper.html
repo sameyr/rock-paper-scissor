@@ -10,35 +10,46 @@
             comp_move = Math.random();
             compMove(comp_move);
             userMove = 'Rock';
-            console.log(userMove);
             comparision(userMove, computerMove);
         "> Rock </button>
         <button onclick="
             comp_move = Math.random();
             compMove(comp_move);
             userMove = 'Paper';
-            console.log(userMove);
             comparision(userMove, computerMove);
         "> Paper </button>
         <button onclick="
             comp_move = Math.random();
             compMove(comp_move);
             userMove = 'Scissor';
-            console.log(userMove);
             comparision(userMove, computerMove);
         "> Scissor </button>
 
         <button onclick="
-        score.wins = 0,
-        score.loose = 0,
-        score.ties = 0">Reset Score</button>
+            score.wins = 0,
+            score.loose = 0,
+            score.ties = 0;
+            localStorage.removeItem('Score')
+            ">Reset Score</button>
 
         <script>
-            const score = {
-                wins : 0,
-                loose: 0,
-                ties: 0
-            };
+            const score = JSON.parse(localStorage.getItem('Score'))
+                 || {wins : 0,
+                    loose : 0,
+                    ties : 0};
+
+
+            /*same thing as above
+            if (score === null){ 
+                score = {
+                    wins : 0,
+                    loose : 0,
+                    ties : 0
+                };
+            }*/
+
+            
+            
             function compMove(comp_move){
                 if (comp_move > 0 && comp_move < 1/3){
                     computerMove = 'Rock';
@@ -50,7 +61,6 @@
                 else {
                     computerMove = 'Scissor';
                 }
-                console.log(computerMove);
             }  
             
             function comparision(computerMove,userMove){
@@ -69,7 +79,12 @@
                     result = 'You win';
                     score.wins +=1; 
                 }
-                
+
+
+                /* JSON.stringfy() converts any variable into string
+                localStorage stores values permanently*/
+                localStorage.setItem('Score',JSON.stringify(score)); 
+
 
                 alert (`
                         You Picked ${userMove}.
