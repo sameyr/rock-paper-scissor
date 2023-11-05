@@ -14,8 +14,6 @@ const score = JSON.parse(localStorage.getItem('Score'))
                     ties : 0
                 };
             }*/
-
-            
             
             function compMove(comp_move){
                 if (comp_move > 0 && comp_move < 1/3){
@@ -69,7 +67,7 @@ const score = JSON.parse(localStorage.getItem('Score'))
             
             function showMove(userMove,computerMove){
                 document.querySelector('.js-showMoves')
-                    .innerHTML = `you <img class = "emojis" src="pictures/${userMove}-emoji.png" > vs <img class = "emojis" src="pictures/${computerMove}-emoji.png"> computer. ` 
+                    .innerHTML = `Your move is: <img class = "emojis" src="pictures/${userMove}-emoji.png" > . Computer move is: <img class = "emojis" src="pictures/${computerMove}-emoji.png">. ` 
             
             }
             function Displayresult(result){
