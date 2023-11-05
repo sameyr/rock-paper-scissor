@@ -21,3 +21,8 @@ It's perfect for honing decision-making skills or adding as a mini-game to your 
 ## Author
 
 Samir Shretsha : @sameyr 
+
+## Reference
+
+@supersimpledev
+Youtube-link : https://www.youtube.com/watch?v=SBmSRK3feww&t=21477s&ab_channel=SuperSimpleDev
