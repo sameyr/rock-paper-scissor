@@ -14,9 +14,9 @@ It's perfect for honing decision-making skills or adding as a mini-game to your 
 
 ## Screenshots
 
-<img src = "screenshot/screenshot1.png">
+<img src = "screenshot/screenshot1.PNG">
 
-<img src = "screenshot/screenshot2.png">
+<img src = "screenshot/screenshot2.PNG">
 
 ## Author
 
