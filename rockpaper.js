@@ -26,9 +26,10 @@ const score = JSON.parse(localStorage.getItem('Score'))
                 else {
                     computerMove = 'Scissor';
                 }
+                return computerMove;
             }  
             
-            function comparision(computerMove,userMove){
+            function comparision(userMove,computerMove){
                 if ((computerMove === 'Rock' && userMove === 'Rock') || (computerMove === 'Paper' && userMove === 'Paper') 
                 ||(computerMove === 'Scissor' && userMove === 'Scissor')){
                     result = 'Tie'
